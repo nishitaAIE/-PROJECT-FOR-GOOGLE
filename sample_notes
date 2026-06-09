@@ -1,0 +1,34 @@
+# Study Notes: Introduction to Machine Learning
+Machine Learning (ML) is a subfield of artificial intelligence (AI) focused on building systems that learn from data, identify patterns, and make decisions with minimal human intervention. Instead of being explicitly programmed with rules, ML models are trained on historical data to generalize to new, unseen examples.
+## Core Paradigms of Machine Learning
+### 1. Supervised Learning
+In supervised learning, the model is trained on labeled data, meaning each training example is paired with its correct output label. The goal is to learn a mapping function from inputs to outputs.
+*   **Regression:** Used when the target variable is continuous (e.g., predicting house prices based on square footage, location, and bedrooms).
+*   **Classification:** Used when the target variable is categorical (e.g., classifying emails as "spam" or "not spam", or identifying digits in handwritten images).
+*   **Common Algorithms:** Linear Regression, Logistic Regression, Decision Trees, Support Vector Machines (SVM), and Neural Networks.
+### 2. Unsupervised Learning
+Unsupervised learning deals with unlabeled data. The goal is to discover hidden patterns, structures, or groupings in the data without explicit guidance.
+*   **Clustering:** Grouping similar data points together (e.g., K-Means clustering for customer segmentation based on buying behavior).
+*   **Dimensionality Reduction:** Simplifying data with high dimensions while preserving critical information (e.g., Principal Component Analysis - PCA, t-SNE). Useful for visualization and speeding up model training.
+*   **Association Rule Learning:** Finding relationships between variables (e.g., Market Basket Analysis to see that customers who buy diapers also tend to buy beer).
+### 3. Reinforcement Learning (RL)
+Reinforcement learning focuses on training an agent to make sequential decisions in an environment to maximize some cumulative reward.
+*   **Feedback Loop:** The agent takes an action, receives feedback (reward or penalty) and a new state from the environment, and updates its strategy (policy) accordingly.
+*   **Key Concepts:** Agent, Environment, State, Action, Reward, Policy.
+*   **Applications:** Game playing (e.g., AlphaGo), robotics control, autonomous driving, and algorithmic trading.
+---
+## Overfitting and Underfitting
+A critical challenge in machine learning is balancing the model's complexity so it performs well on both the training data and new, unseen test data.
+*   **Overfitting:** Occurs when a model learns the training data *too* well, including its noise and outliers. It has high variance and low bias. The model performs exceptionally on training data but fails to generalize to test data.
+    *   *Solutions:* Collect more data, simplify the model (fewer features/parameters), or use regularization techniques (like L1/L2 penalty).
+*   **Underfitting:** Occurs when a model is too simple to capture the underlying structure of the data. It has low variance and high bias. The model performs poorly on both training and testing datasets.
+    *   *Solutions:* Use a more complex model, engineer better features, or train the model longer.
+---
+## Neural Networks and Deep Learning
+Deep Learning is a specialized subset of ML based on Artificial Neural Networks (ANNs) with multiple hidden layers. 
+*   **Structure of a Neuron:** A node (neuron) takes multiple inputs, multiplies them by weights ($w$), adds a bias ($b$), and passes the result through an activation function to produce an output.
+*   **Activation Functions:** Introduce non-linearity into the network, allowing it to learn complex, non-linear relationships. Examples include:
+    *   **ReLU (Rectified Linear Unit):** $f(x) = \max(0, x)$ - widely used in hidden layers due to computational efficiency and overcoming the vanishing gradient problem.
+    *   **Sigmoid:** $f(x) = \frac{1}{1 + e^{-x}}$ - outputs values between 0 and 1, commonly used in binary classification output layers.
+    *   **Softmax:** Generalization of sigmoid to multiple classes, providing a probability distribution over output classes.
+*   **Backpropagation:** The algorithm used to train neural networks. It calculates the gradient of the loss function with respect to the network's weights and adjusts them using optimization techniques like Stochastic Gradient Descent (SGD) or Adam to minimize error.
